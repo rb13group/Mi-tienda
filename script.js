@@ -171,7 +171,7 @@ const products = [
         price: "$21.99",
         image: "https://m.media-amazon.com/images/I/71glwi9dEpL._AC_SL1500_.jpg",
         category: "wellness",
-        link: "https://www.amazon.com/dp/B0GJ37MCt3/?tag=A3C2V47BQBV1OM-20"
+        link: "https://www.amazon.com/dp/B000000000/?tag=A3C2V47BQBV1OM-20"
     },
     // PRODUCTO 2 - Aceite de masaje (corregido)
     {
@@ -189,7 +189,7 @@ const products = [
         price: "$21.99",
         image: "https://m.media-amazon.com/images/I/61p4jM0a1eL._AC_SL1500_.jpg",
         category: "wellness",
-        link: "https://www.amazon.com/dp/B0GL5TTJPh/?tag=A3C2V47BQBV1OM-20"
+        link: "https://www.amazon.com/dp/B000000000/?tag=A3C2V47BQBV1OM-20"
     },
     // PRODUCTO 4 - Kit para parejas (corregido)
     {
@@ -257,3 +257,4 @@ for(let i = 0; i < categoryLinks.length; i++) {
 // --- SHOW ALL PRODUCTS WHEN PAGE LOADS ---
 
 displayProducts(products);
+
