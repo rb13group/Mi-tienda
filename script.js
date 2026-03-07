@@ -1,4 +1,4 @@
-// script.js - VERSIÓN ACTUALIZADA
+// script.js - VERSIÓN MODIFICADA (imágenes enlazadas, botón eliminado)
 
 const products = [
     // ============================================
@@ -162,39 +162,35 @@ const products = [
     },
     
     // ============================================
-    // WELLNESS - TUS PRODUCTOS REALES
+    // WELLNESS
     // ============================================
-    // PRODUCTO 1 - Masajeador (ya tiene buen enlace)
     {
         id: 17,
-        title: "Rechargeable Personal Massager with Air Pulse Sensation, Whisper-Quiet & Waterproof Design, 10 Vibration Modes",
+        title: "Rechargeable Personal Massager",
         price: "$21.99",
         image: "https://m.media-amazon.com/images/I/71glwi9dEpL._AC_SL1500_.jpg",
         category: "wellness",
-        link: "https://www.amazon.com/dp/B000000000/?tag=A3C2V47BQBV1OM-20"
+        link: "https://www.amazon.com/dp/B0GJ37MCT3/?tag=A3C2V47BQBV1OM-20"
     },
-    // PRODUCTO 2 - Aceite de masaje (corregido)
     {
         id: 18,
-        title: "Organic Massage Oil Lavender 8oz",
+        title: "Organic Massage Oil Lavender",
         price: "$19.99",
         image: "https://images-na.ssl-images-amazon.com/images/I/71g8iFhLk7L._AC_SX679_.jpg",
         category: "wellness",
         link: "https://www.amazon.com/dp/B07GJ9M8F6/?tag=A3C2V47BQBV1OM-20"
     },
-    // PRODUCTO 3 - Masajeador personal (corregido)
     {
         id: 19,
-        title: "Rechargeable Air Pulse Personal Massager, 10 Vibration Modes, Quiet & Waterproof Silicone",
+        title: "Air Pulse Personal Massager",
         price: "$21.99",
         image: "https://m.media-amazon.com/images/I/61p4jM0a1eL._AC_SL1500_.jpg",
         category: "wellness",
-        link: "https://www.amazon.com/dp/B000000000/?tag=A3C2V47BQBV1OM-20"
+        link: "https://www.amazon.com/dp/B0C5H7YQNG/?tag=A3C2V47BQBV1OM-20"
     },
-    // PRODUCTO 4 - Kit para parejas (corregido)
     {
         id: 20,
-        title: "Couples Intimate Massage Kit - Everything You Need for a Romantic Evening",
+        title: "Couples Intimate Massage Kit",
         price: "$49.99",
         image: "https://images-na.ssl-images-amazon.com/images/I/71mN6fXqVgL._AC_SX679_.jpg",
         category: "wellness",
@@ -202,7 +198,7 @@ const products = [
     }
 ];
 
-// --- FUNCTION TO DISPLAY PRODUCTS ---
+// --- FUNCIÓN MODIFICADA: imagen enlazada, sin botón ---
 function displayProducts(productsToShow) {
     const container = document.getElementById('products-container');
     
@@ -215,34 +211,34 @@ function displayProducts(productsToShow) {
     for(let i = 0; i < productsToShow.length; i++) {
         const p = productsToShow[i];
         html += '<div class="product-card">';
+        // La imagen ahora es un enlace
+        html += '<a href="' + p.link + '" target="_blank" rel="nofollow sponsored">';
         html += '<img src="' + p.image + '" alt="' + p.title + '" loading="lazy">';
+        html += '</a>';
         html += '<h3>' + p.title + '</h3>';
         html += '<p class="price">' + p.price + '</p>';
-        html += '<a href="' + p.link + '" target="_blank" rel="nofollow sponsored">View on Amazon</a>';
+        // EL BOTÓN HA SIDO ELIMINADO
         html += '</div>';
     }
     
     container.innerHTML = html;
 }
 
-// --- FILTER BY CATEGORY ---
+// --- FILTRAR POR CATEGORÍA ---
 const categoryLinks = document.querySelectorAll('nav.categories a');
 
 for(let i = 0; i < categoryLinks.length; i++) {
     categoryLinks[i].addEventListener('click', function(event) {
         event.preventDefault();
         
-        // Remove active class from all links
         for(let j = 0; j < categoryLinks.length; j++) {
             categoryLinks[j].classList.remove('active');
         }
         
-        // Add active class to clicked link
         this.classList.add('active');
         
         const selectedCategory = this.getAttribute('data-category');
         
-        // Filter products
         const filtered = [];
         for(let j = 0; j < products.length; j++) {
             if(products[j].category === selectedCategory) {
@@ -254,7 +250,5 @@ for(let i = 0; i < categoryLinks.length; i++) {
     });
 }
 
-// --- SHOW ALL PRODUCTS WHEN PAGE LOADS ---
-
+// --- MOSTRAR TODOS LOS PRODUCTOS AL INICIO ---
 displayProducts(products);
-
