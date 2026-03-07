@@ -447,3 +447,25 @@ footer {
     }
 
 }
+/* ============================================
+   ESTILOS PARA IMÁGENES COMO ENLACES
+   ============================================ */
+.product-card a:first-child {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.product-card a:first-child:hover {
+    opacity: 0.8;
+}
+
+.product-card a:first-child img {
+    transition: transform 0.3s;
+}
+
+.product-card a:first-child:hover img {
+    transform: scale(1.02);
+}
+
