@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RB13 Store - Premium Products</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="header.png" alt="RB13 Store" class="logo-img">
+                    <span class="logo-text">RB13</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#categories" class="nav-link">Categories</a>
+                    <a href="#products" class="nav-link">Products</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="search-toggle">🔍</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1 class="hero-title">Discover <span class="gradient-text">Premium</span> Products</h1>
+            <p class="hero-subtitle">Curated selection of the finest products, just for you</p>
+            <div class="search-container">
+                <input type="text" placeholder="Search products..." class="search-input">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0L48 10.7C96 21.3 192 42.7 288 48C384 53.3 480 42.7 576 37.3C672 32 768 32 864 37.3C960 42.7 1056 53.3 1152 58.7C1248 64 1344 64 1392 64L1440 64V120H1392C1344 120 1248 120 1152 120C1056 120 960 120 864 120C768 120 672 120 576 120C480 120 384 120 288 120C192 120 96 120 48 120H0V0Z" fill="white"/>
+            </svg>
+        </div>
+    </header>
+
+    <main>
+        <!-- FEATURED CATEGORIES -->
+        <section id="categories" class="featured-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Shop by Category</h2>
+                    <p>Explore our carefully curated categories</p>
+                </div>
+                
+                <div class="category-grid">
+                    <a href="#" class="category-card" data-category="electronics">
+                        <span class="category-emoji">📱</span>
+                        <h3>Electronics</h3>
+                        <p>Latest gadgets & tech</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="home">
+                        <span class="category-emoji">🏠</span>
+                        <h3>Home & Kitchen</h3>
+                        <p>Make your home cozy</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="sports">
+                        <span class="category-emoji">⚽</span>
+                        <h3>Sports</h3>
+                        <p>Active lifestyle gear</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="books">
+                        <span class="category-emoji">📚</span>
+                        <h3>Books</h3>
+                        <p>Knowledge & entertainment</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="toys">
+                        <span class="category-emoji">🎮</span>
+                        <h3>Toys & Games</h3>
+                        <p>Fun for all ages</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="beauty">
+                        <span class="category-emoji">💄</span>
+                        <h3>Beauty</h3>
+                        <p>Self-care essentials</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="fashion">
+                        <span class="category-emoji">👔</span>
+                        <h3>Fashion</h3>
+                        <p>Style & accessories</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="pets">
+                        <span class="category-emoji">🐾</span>
+                        <h3>Pet Supplies</h3>
+                        <p>Spoil your furry friends</p>
+                    </a>
+                    <a href="#" class="category-card" data-category="wellness">
+                        <span class="category-emoji">🧘</span>
+                        <h3>Wellness</h3>
+                        <p>Health & relaxation</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED PRODUCTS -->
+        <section id="products" class="featured-products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Products</h2>
+                    <p>Hand-picked just for you</p>
+                </div>
+
+                <div id="products-container" class="products-grid">
+                    <!-- Products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST BADGES -->
+        <section class="trust-badges">
+            <div class="container">
+                <div class="badges-grid">
+                    <div class="badge">
+                        <span class="badge-icon">✓</span>
+                        <h4>Premium Quality</h4>
+                        <p>Only the best products</p>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">🔒</span>
+                        <h4>Secure Shopping</h4>
+                        <p>Safe & encrypted</p>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">🚚</span>
+                        <h4>Fast Delivery</h4>
+                        <p>Quick shipping</p>
+                    </div>
+                    <div class="badge">
+                        <span class="badge-icon">💬</span>
+                        <h4>24/7 Support</h4>
+                        <p>We're here to help</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                    <p>Real reviews from real customers</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Amazing products! The quality exceeded my expectations. Will definitely buy again."</p>
+                        <p class="testimonial-author">- Maria G.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Fast shipping and excellent customer service. Highly recommended!"</p>
+                        <p class="testimonial-author">- Carlos R.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">"Great selection of products. Found exactly what I was looking for."</p>
+                        <p class="testimonial-author">- Ana S.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to get special offers and product recommendations</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT US -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About RB13 Store</h2>
+                        <p>Welcome to RB13 Store, your premier destination for quality products. We're passionate about bringing you the best selection across multiple categories.</p>
+                        <p>Our mission is simple: to help you discover amazing products that enhance your daily life. We pride ourselves on honest recommendations and a seamless shopping experience.</p>
+                        <div class="about-features">
+                            <div class="about-feature">
+                                <span>✓ Curated selections</span>
+                            </div>
+                            <div class="about-feature">
+                                <span>✓ Quality products</span>
+                            </div>
+                            <div class="about-feature">
+                                <span>✓ Customer focused</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500" alt="Shopping experience">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>RB13 Store</h3>
+                    <p>Your trusted source for quality products across all categories.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📷</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">📌</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#" data-category="electronics">Electronics</a></li>
+                        <li><a href="#" data-category="home">Home & Kitchen</a></li>
+                        <li><a href="#" data-category="wellness">Wellness</a></li>
+                        <li><a href="#" data-category="fashion">Fashion</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>RB13 Group LLC</li>
+                        <li><a href="mailto:info@rb13-store.com">info@rb13-store.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2026 RB13 Group LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
