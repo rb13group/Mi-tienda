@@ -3,131 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RB13 Store</title>
-    <link rel="icon" type="image/png" href="logo.png">
-    <!-- Google Fonts para mejor tipografía -->
+    <title>RB13 AI Hub - Guía de Herramientas de IA</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <!-- Favicon (si tienes) -->
+    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
     <header>
-    <div class="header-container">
-        <img src="logo.png" alt="RB13 Store Logo" class="header-logo">
-        <div class="header-text">
-            <h1>RB13 Store</h1>
-            <p>Discover amazing products curated for you</p>
+        <div class="container header-container">
+            <div class="logo-area">
+                <img src="favicon.png" alt="RB13 AI Hub Logo" class="logo">
+                <span class="site-title">RB13 AI Hub</span>
+            </div>
+            <p class="tagline">Tu guía definitiva para navegar el mundo de la Inteligencia Artificial</p>
         </div>
-    </div>
-</header>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Inicio</a></li>
+                <li><a href="#niveles">Por Niveles</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#comparativas">Comparativas</a></li>
+                <li><a href="#guias">Guías de Compra</a></li>
+                <li><a href="#futuro">El Futuro</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <main>
-        <h2>Categories</h2>
-        <nav class="categories">
-            <a href="#" data-category="electronics">Electronics</a>
-            <a href="#" data-category="home">Home & Kitchen</a>
-            <a href="#" data-category="sports">Sports & Outdoors</a>
-            <a href="#" data-category="books">Books</a>
-            <a href="#" data-category="toys">Toys & Games</a>
-            <a href="#" data-category="beauty">Beauty</a>
-            <a href="#" data-category="fashion">Fashion</a>
-            <a href="#" data-category="pets">Pet Supplies</a>
-            <a href="#" data-category="wellness">Wellness</a>
-        </nav>
+        <!-- SECCIÓN INICIO / DESTACADOS -->
+        <section id="inicio" class="section">
+            <div class="container">
+                <h2 class="section-title">🌟 Lo Mejor de la IA en 2026</h2>
+                <p class="section-subtitle">Herramientas imprescindibles que están transformando la forma de trabajar y crear.</p>
+                
+                <div class="featured-grid" id="featured-container">
+                    <!-- Se llenará con JavaScript -->
+                </div>
+            </div>
+        </section>
 
-        <section id="products">
-            <h2>Featured Products</h2>
-            <div id="products-container" class="products-grid">
-                <p>Loading products...</p>
+        <!-- SECCIÓN POR NIVELES (S, A, B) -->
+        <section id="niveles" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">📊 Clasificación por Niveles</h2>
+                <p class="section-subtitle">Desde lo esencial hasta lo especializado. Encuentra la herramienta perfecta para ti.</p>
+                
+                <div class="level-tabs">
+                    <button class="level-tab active" data-level="s">Nivel S - Imprescindibles</button>
+                    <button class="level-tab" data-level="a">Nivel A - Uso General</button>
+                    <button class="level-tab" data-level="b">Nivel B - Especializadas</button>
+                </div>
+                
+                <div class="tools-grid" id="level-tools-container">
+                    <!-- Se llenará con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN POR CATEGORÍAS DE USO -->
+        <section id="categorias" class="section">
+            <div class="container">
+                <h2 class="section-title">🔍 Explora por Categoría</h2>
+                <p class="section-subtitle">¿Qué necesitas hacer hoy? Encuentra la IA perfecta para tu tarea.</p>
+                
+                <div class="category-filters">
+                    <button class="category-filter active" data-category="all">Todos</button>
+                    <button class="category-filter" data-category="chat">Chat & Asistentes</button>
+                    <button class="category-filter" data-category="code">Programación</button>
+                    <button class="category-filter" data-category="write">Escritura</button>
+                    <button class="category-filter" data-category="image">Imagen</button>
+                    <button class="category-filter" data-category="audio">Audio/Música</button>
+                    <button class="category-filter" data-category="video">Video</button>
+                    <button class="category-filter" data-category="productivity">Productividad</button>
+                </div>
+                
+                <div class="tools-grid" id="category-tools-container">
+                    <!-- Se llenará con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN COMPARATIVAS (Modelos de Lenguaje) -->
+        <section id="comparativas" class="section bg-light">
+            <div class="container">
+                <h2 class="section-title">⚖️ Comparativas: ¿Cuál elegir?</h2>
+                <p class="section-subtitle">Analizamos los principales modelos de lenguaje para que tomes la mejor decisión.</p>
+                
+                <div class="comparison-table-container">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Mejor para</th>
+                                <th>Precio</th>
+                                <th>Ventaja clave</th>
+                                <th>Benchmark SWE-Bench</th>
+                            </tr>
+                        </thead>
+                        <tbody id="comparison-body">
+                            <!-- Se llenará con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN GUÍAS DE COMPRA PARA NEGOCIOS -->
+        <section id="guias" class="section">
+            <div class="container">
+                <h2 class="section-title">💼 Guías de Compra para Negocios</h2>
+                <p class="section-subtitle">Inversiones inteligentes en IA que maximizan tu ROI.</p>
+                
+                <div class="guides-grid" id="guides-container">
+                    <!-- Se llenará con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN EL FUTURO: VISIBILIDAD EN MOTORES DE RESPUESTA IA -->
+        <section id="futuro" class="section bg-dark">
+            <div class="container">
+                <h2 class="section-title text-white">🔮 El Futuro: Visibilidad en Motores de Respuesta IA</h2>
+                <p class="section-subtitle text-white-light">¿Cómo asegurar que tu negocio aparezca en ChatGPT, Perplexity y Gemini?</p>
+                
+                <div class="future-content">
+                    <div class="future-card">
+                        <i class="fas fa-chart-line future-icon"></i>
+                        <h3>Auditoría de Visibilidad en LLMs</h3>
+                        <p>Analizamos cómo te ven los grandes modelos de lenguaje y optimizamos tu presencia.</p>
+                        <a href="#" class="btn-outline">Saber más</a>
+                    </div>
+                    <div class="future-card">
+                        <i class="fas fa-database future-icon"></i>
+                        <h3>Optimización de Datos Estructurados</h3>
+                        <p>Implementamos schema markup que los LLMs entienden y prefieren.</p>
+                        <a href="#" class="btn-outline">Saber más</a>
+                    </div>
+                    <div class="future-card">
+                        <i class="fas fa-rocket future-icon"></i>
+                        <h3>Estrategias para ser la Respuesta Elegida</h3>
+                        <p>Técnicas avanzadas para posicionar tu marca en la era de la IA generativa.</p>
+                        <a href="#" class="btn-outline">Saber más</a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- ABOUT US SECTION -->
+    <!-- SECCIÓN SOBRE NOSOTROS MEJORADA -->
     <section class="about-section">
-        <div class="about-container">
-            <h2>About RB13 Store</h2>
+        <div class="container">
+            <h2 class="section-title">Sobre RB13 AI Hub</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Welcome to RB13 Store, your premier destination for quality products curated just for you. We are passionate about bringing you the best selection across multiple categories including electronics, home goods, wellness products, and more.</p>
+                    <p>En <strong>RB13 AI Hub</strong> somos un equipo de expertos en inteligencia artificial y tecnología. Nuestra misión es <strong>desmitificar la IA</strong> y ayudar a profesionales, creadores y empresas a <strong>navegar el increíble mundo de las herramientas de inteligencia artificial</strong>.</p>
                     
-                    <p>As an Amazon affiliate store, we carefully select and recommend products we believe in. When you purchase through our links, we may earn a small commission at no extra cost to you. This helps us maintain and improve our website to continue bringing you great product recommendations.</p>
+                    <p>Probamos, comparamos y analizamos cientos de herramientas para ofrecerte <strong>guías honestas, comparativas precisas y recomendaciones accionables</strong>. Creemos que la IA debe ser accesible para todos, y nuestro contenido está diseñado para empoderarte a tomar las mejores decisiones tecnológicas.</p>
                     
-                    <p>Our mission is simple: to help you discover amazing products that enhance your daily life. We pride ourselves on honest recommendations and a seamless shopping experience.</p>
-                    
-                    <p>Thank you for visiting RB13 Store. Happy shopping!</p>
+                    <p>Ya seas un programador buscando el mejor asistente de código, un marketero automatizando tareas, o un emprendedor buscando su próxima inversión en IA, <strong>aquí encontrarás la guía que necesitas</strong>.</p>
                 </div>
                 <div class="about-highlights">
-                    <div class="highlight">
-                        <span class="highlight-icon">✓</span>
-                        <span>Curated selections</span>
+                    <div class="highlight-item">
+                        <span class="highlight-number">500+</span>
+                        <span>Herramientas analizadas</span>
                     </div>
-                    <div class="highlight">
-                        <span class="highlight-icon">✓</span>
-                        <span>Quality products</span>
+                    <div class="highlight-item">
+                        <span class="highlight-number">50+</span>
+                        <span>Guías detalladas</span>
                     </div>
-                    <div class="highlight">
-                        <span class="highlight-icon">✓</span>
-                        <span>Affiliate partner</span>
+                    <div class="highlight-item">
+                        <span class="highlight-number">10K+</span>
+                        <span>Usuarios mensuales</span>
                     </div>
-                    <div class="highlight">
-                        <span class="highlight-icon">✓</span>
-                        <span>Customer focused</span>
+                    <div class="highlight-item">
+                        <span class="highlight-number">4.9/5</span>
+                        <span>Satisfacción</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER WITH COMPANY INFO -->
+    <!-- FOOTER MEJORADO -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>RB13 Store</h3>
-                <p>Your trusted source for quality products across all categories. We bring you the best finds from Amazon.</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p><strong>RB13 Group LLC</strong></p>
-                <p>Email: <a href="mailto:info@rb13-store.com">info@rb13-store.com</a></p>
-                <!-- Si tienes dirección física, descomenta la siguiente línea -->
-                <!-- <p>Address: 123 Business Ave, Suite 100<br>Katy, TX 77493</p> -->
-            </div>
-            
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <p><a href="#">Home</a></p>
-                <p><a href="#">Categories</a></p>
-                <p><a href="#">About Us</a></p>
-                <p><a href="#">Contact</a></p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Follow Us</h3>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>RB13 AI Hub</h4>
+                <p>Tu brújula en el universo de la inteligencia artificial. Guías honestas, comparativas precisas.</p>
                 <div class="social-links">
-                    <a href="#" class="social-icon">📘</a>
-                    <a href="#" class="social-icon">📷</a>
-                    <a href="#" class="social-icon">🐦</a>
-                    <a href="#" class="social-icon">📌</a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+            <div class="footer-col">
+                <h4>Explora</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#niveles">Por Niveles</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#comparativas">Comparativas</a></li>
+                    <li><a href="#guias">Guías de Compra</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Términos de Uso</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Aviso de Afiliados</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p><strong>RB13 Group LLC</strong></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:info@rb13-store.com">info@rb13-store.com</a></p>
+                <p><i class="fas fa-globe"></i> <a href="https://rb13-store.com">rb13-store.com</a></p>
+            </div>
         </div>
-        
         <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p>© 2025 RB13 Group LLC. All rights reserved.</p>
-                <p class="affiliate-disclosure">As an Amazon Associate, we earn from qualifying purchases. All links are affiliate links.</p>
+            <div class="container">
+                <p>© 2026 RB13 Group LLC. Todos los derechos reservados.</p>
+                <p class="affiliate-disclosure">Como asociados de Amazon y otros programas, ganamos comisiones por compras calificadas.</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
-
 </html>
-
-
-
