@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RB13 Store | Trading & Distribution</title>
+  <link rel="icon" type="image/png" href="favicon.PNG" />
+  <meta name="description" content="RB13 Store is a U.S.-based sourcing, trading, and distribution company focused on identifying high-demand products and supporting their movement across both domestic and international markets. Our commercial approach connects suppliers with growing demand across the United States and Latin America." />
+  <style>
+    :root {
+      --navy: #0f172a;
+      --blue: #1d4ed8;
+      --light-blue: #dbeafe;
+      --slate: #334155;
+      --muted: #64748b;
+      --bg: #f8fafc;
+      --white: #ffffff;
+      --border: #e2e8f0;
+      --success: #0f766e;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--navy);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: rgba(255,255,255,0.88);
+      font-size: 0.92rem;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(248,250,252,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(226,232,240,0.9);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+.nav-links {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      flex-wrap: wrap;
+      color: var(--slate);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover { transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: white;
+      border-color: var(--border);
+      color: var(--navy);
+    }
+
+    .hero {
+      padding: 5.5rem 0 4rem;
+      background:
+        radial-gradient(circle at top right, rgba(59,130,246,0.18), transparent 24%),
+        linear-gradient(180deg, #eff6ff 0%, #f8fafc 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-weight: 700;
+      font-size: 0.86rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 4.4rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--slate);
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-top: 1.6rem;
+    }
+
+    .hero-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .metric {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .metric div {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+
+    section {
+      padding: 4.5rem 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    .section-head h2 {
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      margin: 0 0 0.7rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .grid-3, .grid-4, .grid-2 {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(4, 1fr); }
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3, .card h4 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+    }
+
+    .card p, .card li {
+      color: var(--slate);
+    }
+
+    .muted { color: var(--muted); }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      padding: 0.72rem 1rem;
+      border-radius: 999px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--slate);
+      font-weight: 600;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .timeline-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--light-blue);
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, var(--navy), #1e293b);
+      color: white;
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .cta p { color: rgba(255,255,255,0.8); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1.4rem;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 0.95rem 1rem;
+      font: inherit;
+      background: white;
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      color: var(--muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.84rem;
+      color: var(--success);
+      background: #ccfbf1;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-weight: 700;
+      margin-bottom: 0.9rem;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    ul.clean li::before {
+      content: "•";
+      color: var(--blue);
+      font-weight: 800;
+      margin-right: 0.55rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .split,
+      .contact-grid,
+      .grid-4,
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+
+    /* Fix contrast inside Supplier Partnership cards */
+    .cta .card {
+      color: var(--navy);
+      background: white;
+    }
+
+    .cta .card p, .cta .card h3 {
+      color: var(--navy);
+    }
+
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>U.S.-Based Trading & Distribution Company</div>
+      <div><a href="mailto:info@rb13-store.com">info@rb13-store.com</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <img src="header.PNG" alt="RB13 Store" style="height:90px; background:#F8F9FC; padding:0px; border-radius:0px;">
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#categories">Categories</a>
+        <a href="#markets">Markets</a>
+        <a href="#operations">Operations</a>
+        <a href="#suppliers">Suppliers</a>
+        <a href="#contact" class="btn btn-primary">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Strategic sourcing · Distribution · Export</span>
+          <h1>Connecting U.S. suppliers with growth opportunities in Latin America.</h1>
+          <p>
+            RB13 Store is an American trading and distribution company focused on sourcing quality consumer products,
+            coordinating logistics, and supporting market expansion into Latin American destinations, including Venezuela.
+          </p>
+          <div class="hero-actions">
+            <a href="#suppliers" class="btn btn-primary">Become a Supplier</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
+          <div class="pill-row">
+            <span class="pill">U.S. supplier network</span>
+            <span class="pill">Multi-category sourcing</span>
+            <span class="pill">Export-oriented operations</span>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <span class="badge">Trusted B2B Positioning</span>
+          <h3>Why partners work with RB13 Store</h3>
+          <div class="metric">
+            <div>
+              <strong>Multi</strong>
+              <span>product category sourcing strategy</span>
+            </div>
+            <div>
+              <strong>LATAM</strong>
+              <span>distribution and export focus</span>
+            </div>
+            <div>
+              <strong>U.S.</strong>
+              <span>based commercial presence</span>
+            </div>
+            <div>
+              <strong>B2B</strong>
+              <span>supplier relationship approach</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>About RB13 Store</h2>
+          <p>
+            RB13 Store is an American trading and distribution company dedicated to building strong relationships with manufacturers, wholesalers, and brand owners. 
+
+Our goal is to identify quality products, establish reliable sourcing channels, and support their distribution across both local U.S. markets and selected international regions.
+
+By combining flexible product sourcing with a diversified category strategy, RB13 Store is able to collaborate with suppliers across multiple industries while exploring growth opportunities in Latin America and other emerging markets.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Who We Are</h3>
+            <p>
+              RB13 Store is a U.S.-based company focused on identifying reliable products, building supplier relationships,
+              and supporting product movement into Latin American markets through organized distribution channels.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Our Mission</h3>
+            <p>
+              To connect reputable U.S. suppliers with high-potential regional markets by providing dependable sourcing,
+              commercial coordination, and export-oriented distribution support.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Our Approach</h3>
+            <p>
+              We prioritize supplier trust, category flexibility, professional communication, and scalable relationships that can
+              evolve into repeat purchasing and long-term cooperation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories">
+      <div class="container">
+        <div class="section-head">
+          <h2>Product Categories</h2>
+          <p>
+            Our sourcing strategy spans multiple consumer product categories, allowing RB13 Store to evaluate supplier partnerships across a broad range of commercial segments. 
+
+This diversified approach enables us to adapt to evolving demand in both domestic U.S. markets and international distribution channels, creating scalable opportunities for supplier collaboration.
+          </p>
+        </div>
+        <div class="grid-4">
+          <div class="card"><h4>Home & Kitchen</h4><p>Functional household goods, kitchen solutions, and everyday consumer products.</p></div>
+          <div class="card"><h4>Tools & Hardware</h4><p>Utility products, accessories, and practical solutions for residential and commercial demand.</p></div>
+          <div class="card"><h4>Health & Personal Care</h4><p>High-turnover personal use categories with consistent demand across regional retail channels.</p></div>
+          <div class="card"><h4>Consumer Electronics</h4><p>Selected electronics and accessories aligned with distribution opportunities and market trends.</p></div>
+          <div class="card"><h4>Automotive Accessories</h4><p>Value-oriented vehicle accessories and related products for growing cross-border channels.</p></div>
+          <div class="card"><h4>Pet Supplies</h4><p>Essential categories designed for stable demand and multi-market product placement.</p></div>
+          <div class="card"><h4>Office & Business Supplies</h4><p>Commercial and everyday workplace items suitable for wholesale and regional distribution.</p></div>
+          <div class="card"><h4>General Merchandise</h4><p>Flexible sourcing capacity across multiple categories based on supplier and market fit.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="markets">
+      <div class="container">
+        <div class="section-head">
+          <h2>Markets We Serve</h2>
+          <p>
+            RB13 Store operates with a commercial focus on both domestic distribution and international market opportunities. 
+
+While we maintain a strong presence within the United States, we also work toward expanding product access into Latin American markets where demand for quality consumer goods continues to grow.
+
+Our objective is to create long-term supplier relationships that support reliable product flow across multiple regional markets.
+          </p>
+        </div>
+
+        <div class="split">
+          <div class="card">
+            <h3>Regional Focus</h3>
+            <ul class="clean">
+              <li>Venezuela</li>
+              <li>Colombia</li>
+              <li>Panama</li>
+              <li>Caribbean markets</li>
+              <li>Additional Latin American opportunities</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Commercial Value for Suppliers</h3>
+            <ul class="clean">
+              <li>Access to growth-oriented and underserved markets</li>
+              <li>Category diversification beyond domestic channels</li>
+              <li>Opportunity for repeat purchase relationships</li>
+              <li>Professional communication with a U.S.-based company</li>
+              <li>Flexible sourcing aligned with regional demand</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 1.25rem;">
+          <h3>Market Coverage Snapshot</h3>
+          <p class="muted">
+            Our commercial focus includes Latin American markets where strong product demand, practical category selection,
+            and dependable supplier relationships can create long-term distribution opportunities.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Venezuela</span>
+            <span class="pill">Colombia</span>
+            <span class="pill">Panama</span>
+            <span class="pill">Caribbean Region</span>
+            <span class="pill">LATAM Expansion</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>How We Work</h2>
+          <p>
+            This section reinforces an organized business workflow. Suppliers are more likely to trust a company that presents
+            a clear commercial process from first contact to long-term purchasing alignment.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="card timeline-item">
+            <div class="timeline-num">1</div>
+            <div>
+              <h3>Supplier Evaluation</h3>
+              <p class="muted">We review category fit, pricing structure, supply reliability, product consistency, and long-term potential.</p>
+            </div>
+          </div>
+          <div class="card timeline-item">
+            <div class="timeline-num">2</div>
+            <div>
+              <h3>Commercial Alignment</h3>
+              <p class="muted">We align on catalog structure, packaging requirements, MOQ expectations, and market suitability.</p>
+            </div>
+          </div>
+          <div class="card timeline-item">
+            <div class="timeline-num">3</div>
+            <div>
+              <h3>Logistics Coordination</h3>
+              <p class="muted">We organize sourcing and export planning with a focus on smooth product movement into Latin American markets.</p>
+            </div>
+          </div>
+          <div class="card timeline-item">
+            <div class="timeline-num">4</div>
+            <div>
+              <h3>Growth Partnership</h3>
+              <p class="muted">We aim to develop stable supplier relationships built for recurring orders and regional expansion opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="operations">
+      <div class="container">
+        <div class="section-head">
+          <h2>Logistics & Operations</h2>
+          <p>
+            Our operating model is designed to support efficient sourcing, supplier coordination, and structured product movement across regional markets. 
+
+RB13 Store works with suppliers to align product availability, category demand, and distribution opportunities while maintaining a professional and organized commercial process.
+
+This operational approach allows us to support both domestic product circulation and international distribution opportunities.
+          </p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Sourcing Coordination</h3>
+            <p>We evaluate product lines across multiple categories and coordinate with suppliers based on demand potential, commercial fit, and scalability.</p>
+          </div>
+          <div class="card">
+            <h3>Export-Oriented Planning</h3>
+            <p>Our operating model is designed around regional product movement, market alignment, and structured purchasing relationships for Latin America.</p>
+          </div>
+          <div class="card">
+            <h3>Supplier Communication</h3>
+            <p>We maintain a direct, professional, and relationship-based communication style intended to support long-term B2B cooperation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits">
+      <div class="container">
+        <div class="section-head">
+          <h2>Supplier Benefits</h2>
+          <p>
+            This block gives the website the tone of a company that can create commercial value, not just request catalogs.
+          </p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Multi-Category Opportunity</h3>
+            <p>We maintain a flexible sourcing model that allows us to evaluate different product categories based on market demand and supplier strength.</p>
+          </div>
+          <div class="card">
+            <h3>Regional Expansion Potential</h3>
+            <p>Suppliers can explore demand beyond domestic channels by aligning with a company focused on Latin American distribution opportunities.</p>
+          </div>
+          <div class="card">
+            <h3>Relationship-Driven Growth</h3>
+            <p>We position ourselves as a long-term business partner with interest in repeat transactions, stable communication, and scalable cooperation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="suppliers">
+      <div class="container">
+        <div class="cta">
+          <div class="section-head" style="margin-bottom:1rem; max-width:760px;">
+            <h2 style="color:white;">Supplier Partnership</h2>
+            <p>
+              RB13 Store is always open to establishing relationships with reliable U.S. manufacturers, brand owners, and wholesalers interested in expanding their commercial reach.
+
+We prioritize professional communication, supplier trust, and long-term cooperation. Our sourcing model allows us to evaluate products across multiple categories and align them with market opportunities both locally and internationally.
+            </p>
+          </div>
+          <div class="grid-3">
+            <div class="card">
+              <h3>Why Partner With Us</h3>
+              <p>We operate as a U.S.-based trading and distribution company with a diversified sourcing model and a clear focus on identifying market opportunities across both domestic and international channels.</p>
+            </div>
+            <div class="card">
+              <h3>What We Look For</h3>
+              <p>Reliable suppliers, consistent product quality, scalable catalogs, and partners interested in developing long-term business relationships.</p>
+            </div>
+            <div class="card">
+              <h3>What You Can Expect</h3>
+              <p>Professional communication, flexible category evaluation, market-oriented sourcing decisions, and a collaborative approach to long-term growth opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contact RB13 Store</h2>
+          <p>
+            The contact section should look corporate and simple. For now, the main professional detail is your business email.
+            Later you can add a U.S. business address, phone number, or contact routing form.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="card">
+            <h3>Company Information</h3>
+            <p><strong>Company:</strong> RB13 Store</p>
+            <p><strong>Business Profile:</strong> U.S.-Based Trading & Distribution</p>
+            <p><strong>Email:</strong> <a href="mailto:info@rb13-store.com">info@rb13-store.com</a></p>
+	    <p><strong>Address:</strong> 1100 West 23rd Street, Houston, TX 77008</p>
+            <p><strong>Markets:</strong> Latin America, with focus on Venezuela and surrounding opportunities</p>
+            <p class="muted">Recommended next additions: LinkedIn company page, business address, supplier inquiry PDF, and basic legal footer.</p>
+          </div>
+
+          <form class="card contact-form" action="mailto:info@rb13-store.com" method="post" enctype="text/plain">
+            <h3>Supplier Inquiry</h3>
+            <input type="text" name="company" placeholder="Company name" required />
+            <input type="text" name="contact" placeholder="Contact person" required />
+            <input type="email" name="email" placeholder="Business email" required />
+            <select name="category">
+              <option value="">Product category</option>
+              <option>Home & Kitchen</option>
+              <option>Tools & Hardware</option>
+              <option>Health & Personal Care</option>
+              <option>Consumer Electronics</option>
+              <option>General Merchandise</option>
+            </select>
+            <textarea name="message" placeholder="Tell us about your product line, catalog, MOQ, and export capabilities."></textarea>
+            <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 RB13 Store. All rights reserved.</div>
+      <div>Trading · Distribution · Export</div>
+    </div>
+  </footer>
+</body>
+</html>
